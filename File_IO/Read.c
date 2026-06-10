@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
     */
     // read the file content in a loop to untill End-of-File (0) is reached
 
-    while((numBytes = read(fd, buff, MAX_READ)) > 0){
+    while((numBytes = read(fd, buff, MAX_READ)) > 0){  /* bigger than 0 means it is still reading, = 0 means EOF */
         // write the current chunk to stdout and check for partial writes/errors
         if (write(STDOUT_FILENO, buff, numBytes)!= numBytes){
             const char * err_msg = "write to stdout failed or was partial\n";
