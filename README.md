@@ -22,6 +22,10 @@ C_Programming/
 |__ Mycp/
 |   |__ mycp.c # This program combines everything from write.c and read.c into one real utility. It works exactly like the Unix cp command, built entirely from raw system calls.
 |
+|-- OpenMotion_Host_Application/
+|  |
+|  -- host_app.c
+|
 └── README.md
 ```
  
@@ -52,6 +56,8 @@ This program combines everything from `write.c` and `read.c` into one real utili
 | 2025-06-9 | `File_IO` | POSIX system calls: `open`, `read`, `write`, `close` — Chapter 4 TLPI |
 | 2025-06-9 | `grain_examble` | Problem Solving|
 | 2025-06-10 | `Mycp` |  mycp.c  Takes two filenames as arguments, reads source in 1024-byte chunks, writes to destination |
+| 2025-06-25 | `OpenMotion_Host_Application` |  host_app.c  Reads G-code instructions from a file, converts motion commands into stepper-motor parameters, communicates with an STM32 over a Linux serial port, and waits for motion completion before sending the next command.
+
  
 ---
  
